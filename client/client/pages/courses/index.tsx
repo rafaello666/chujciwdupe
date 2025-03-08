@@ -1,9 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import { getCourses, createCourse } from '../../services/api';
+import dotenv from 'dotenv';
+
+// Load environment variables
+dotenv.config();
 
 interface Course {
   id: number;
   title: string;
+}
+
+export default function HomePage() {
+  return (
+    <div style={{ padding: '1rem' }}>
+      <h1>Witaj w aplikacji do nauki szybkiego pisania!</h1>
+      <p>
+        Przejdź do zakładki <a href="/courses">Courses</a>, aby zobaczyć listę
+        kursów.
+      </p>
+    </div>
+  );
 }
 
 export default function CoursesPage() {

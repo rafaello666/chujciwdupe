@@ -1,5 +1,6 @@
 import React from 'react';
-
+import dotenv from 'dotenv';
+dotenv.config();
 export default function HomePage() {
   return (
     <div style={{ padding: '1rem' }}>
